@@ -1,471 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="forms.css" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  </head>
-  <body>
-    <header>
-    <nav>
-        <div>
-          <a href="/"><img src="/images/college_logo.png" /></a>
-        </div>
-        <div>
-          <ul class="nav-list">
-            <li
-              style="
-                display: flex;
-                line-height: normal;
-                height: 100%;
-                justify-content: center;
-                align-items: center;
-              "
-              class="nav-link"
-            >
-              <a class="num1" style="line-height: 35px" href="tel:+91-79-66046300"
-                ><i class="fa fa-phone" aria-hidden="true"></i>
-                +91-79-66046300</a
-              >
-              <a class="num2" style="line-height: 35px" href="tel:+91-79-35201300"
-                ><i class="fa fa-phone" aria-hidden="true"></i>
-                +91-79-35201300</a
-              >
-            </li>
-            <li class="courses-btn">
-              <a href="https://silveroakuni.ac.in/" target="_blank"
-                ><i class="fa fa-book" aria-hidden="true"></i> Courses</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
 
-    <div class="Landing-section">
-      <div class="Landing-section-inner">
-        <div class="Banner-Section">
-          <div class="Banner-Section-left"></div>
-          <div class="Banner-Section-right">
-            <div class="form-section">
-              <form
-                id="CRMLeadCaptureForm"
-                name="CRMLeadCaptureForm"
-                class="formBox Regis"
-                method="post"
-                action="/LeadCapture/CRMLeadCapture"
-              >
-                <div class="FormHead">
-                  <div class="title">Apply Now</div>
-                </div>
-                <div class="FormFieldArea mtb_30">
-                  <div class="form_fields">
-                    <div class="column_one">
-                      <input
-                        type="text"
-                        class="text common"
-                        placeholder="Name"
-                        data-val="true"
-                        data-val-required="Name Required"
-                        id="StudentNameAsPerMarkSheet"
-                        name="StudentNameAsPerMarkSheet"
-                        value=""
-                      />
-                      <span
-                        class="error field-validation-valid"
-                        data-valmsg-for="StudentNameAsPerMarkSheet"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
-                    <div class="column_one">
-                      <input
-                        type="text"
-                        class="text common"
-                        placeholder="Email"
-                        data-val="true"
-                        data-val-assertthat="EmailId Not Valid"
-                        data-val-assertthat-expression='"IsEmail(EmailId)"'
-                        data-val-assertthat-fieldsmap='{"EmailId":"string"}'
-                        data-val-assertthat-methodslist='["IsEmail"]'
-                        id="EmailId"
-                        name="EmailId"
-                        value=""
-                      />
-                      <span
-                        class="error field-validation-valid"
-                        data-valmsg-for="EmailId"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
-                    <div class="column_one">
-                      <input
-                        type="text"
-                        class="text common OnlyNumbersAndLimit10DigitsAllowed"
-                        placeholder="Phone Number"
-                        data-val="true"
-                        data-val-minlength="Minimum 10 Digit Required."
-                        data-val-minlength-min="10"
-                        data-val-required="Mobile Number Required"
-                        id="MobileNo"
-                        name="MobileNo"
-                        value=""
-                      />
-                      <span
-                        class="error field-validation-valid"
-                        data-valmsg-for="MobileNo"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
-                    <div class="column_one">
-                      <select
-                        class="common search_select"
-                        data-placeholder="Select State"
-                        data-val="true"
-                        data-val-required="State Required"
-                        id="StateIdc"
-                        name="StateIdc"
-                      >
-                        <option value=""></option>
-                        <option value="30">ANDAMAN AND NICOBAR ISLANDS</option>
-                        <option value="1">ANDHRA PRADESH</option>
-                        <option value="2">ARUNACHAL PRADESH</option>
-                      </select>
-                      <span
-                        class="error field-validation-valid"
-                        data-valmsg-for="StateIdc"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Admissions Open - Silver Oak University - University Managment System
+  </title>
 
-                    <div class="column_one">
-                      <select
-                        class="common search_select"
-                        data-placeholder="Select City"
-                        data-val="true"
-                        data-val-required="City Required"
-                        id="CityIdc"
-                        name="CityIdc"
-                      >
-                        <option value=""></option>
-                      </select>
-                      <span
-                        class="error field-validation-valid"
-                        data-valmsg-for="CityIdc"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
-                    <div class="column_one">
-                      <select
-                        class="common search_select"
-                        data-placeholder="Select Specialization"
-                        data-val="true"
-                        data-val-required="Specialization Required"
-                        id="DivisionIdStr"
-                        name="DivisionIdStr"
-                      >
-                        <option value=""></option>
-                        <option value="1">B.A.</option>
-                        <option value="2">B.A. (HONS)</option>
-                      </select>
-                      <span
-                        class="error field-validation-valid"
-                        data-valmsg-for="DivisionIdStr"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
-                    <div class="ButtonArea">
-                      <button type="submit" class="buttonLogin ApplyNow">
-                        Apply Now
-                      </button>
-                    </div>
-                    <div class="AlreadyText mt_20">Already Applied?</div>
-                    <div class="ButtonArea mtb_30">
-                      <a
-                        class="buttonLogin"
-                        href="/LeadCapture/RedirectToSignInPage"
-                        >Click here to Login</a
-                      >
-                    </div>
+  <link rel="icon" href="/images/favicon64.png" />
+
+  <link rel="stylesheet" href="/lib/Bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/landing.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="header landing">
+      <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="/"><img src="/images/college_logo.png" /></a>
+          </div>
+          <nav>
+            <div class="nav-mobile">
+              <a id="nav-toggle" href="#!"><span></span></a>
+            </div>
+            <ul class="nav-list">
+              <li style="
+                    display: flex;
+                    flex-direction: column;
+                    line-height: normal;
+                    height: 100%;
+                  ">
+                <a style="line-height: 35px" href="tel:+91-79-66046300"><i class="fa fa-phone" aria-hidden="true"></i>
+                  +91-79-66046300</a>
+                <a style="line-height: 35px" href="tel:+91-79-35201300"><i class="fa fa-phone" aria-hidden="true"></i>
+                  +91-79-35201300</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/" target="_blank"><i class="fa fa-book" aria-hidden="true"></i>
+                  Courses</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </div>
+  </header>
+  <div class="Landing-section">
+    <div class="Landing-section-inner">
+      <div class="Banner-Section">
+        <div class="Banner-Section-left"></div>
+        <div class="Banner-Section-right">
+          <div class="form-section">
+            <form id="CRMLeadCaptureForm" name="CRMLeadCaptureForm" class="formBox Regis" method="post"
+              action="/LeadCapture/CRMLeadCapture">
+              <div class="FormHead">
+                <div class="title">Apply Now</div>
+              </div>
+              <div class="FormFieldArea mtb_30">
+                <div class="form_fields">
+                  <div class="column_one">
+                    <input type="text" class="text common" placeholder="Name" data-val="true"
+                      data-val-required="Name Required" id="StudentNameAsPerMarkSheet" name="StudentNameAsPerMarkSheet"
+                      value="" />
+                    <span class="error field-validation-valid" data-valmsg-for="StudentNameAsPerMarkSheet"
+                      data-valmsg-replace="true"></span>
+                  </div>
+                  <div class="column_one">
+                    <input type="text" class="text common" placeholder="Email" data-val="true"
+                      data-val-assertthat="EmailId Not Valid" data-val-assertthat-expression='"IsEmail(EmailId)"'
+                      data-val-assertthat-fieldsmap='{"EmailId":"string"}' data-val-assertthat-methodslist='["IsEmail"]'
+                      id="EmailId" name="EmailId" value="" />
+                    <span class="error field-validation-valid" data-valmsg-for="EmailId"
+                      data-valmsg-replace="true"></span>
+                  </div>
+                  <div class="column_one">
+                    <input type="text" class="text common OnlyNumbersAndLimit10DigitsAllowed" placeholder="Phone Number"
+                      data-val="true" data-val-minlength="Minimum 10 Digit Required." data-val-minlength-min="10"
+                      data-val-required="Mobile Number Required" id="MobileNo" name="MobileNo" value="" />
+                    <span class="error field-validation-valid" data-valmsg-for="MobileNo"
+                      data-valmsg-replace="true"></span>
+                  </div>
+                  <div class="column_one">
+                    <select class="common search_select" data-placeholder="Select State" data-val="true"
+                      data-val-required="State Required" id="StateIdc" name="StateIdc">
+                      <option value="">Select State</option>
+                      <option value="30">ANDAMAN AND NICOBAR ISLANDS</option>
+                      <option value="1">ANDHRA PRADESH</option>
+                      <option value="2">ARUNACHAL PRADESH</option>
+                    </select>
+                    <span class="error field-validation-valid" data-valmsg-for="StateIdc"
+                      data-valmsg-replace="true"></span>
+                  </div>
+
+                  <div class="column_one">
+                    <select class="common search_select" data-placeholder="Select City" data-val="true"
+                      data-val-required="City Required" id="CityIdc" name="CityIdc">
+                      <option value="">Select City</option>
+                    </select>
+                    <span class="error field-validation-valid" data-valmsg-for="CityIdc"
+                      data-valmsg-replace="true"></span>
+                  </div>
+                  <div class="column_one">
+                    <select class="common search_select" data-placeholder="Select Specialization" data-val="true"
+                      data-val-required="Specialization Required" id="DivisionIdStr" name="DivisionIdStr">
+                      <option value="">Select Specialization</option>
+                      <option value="1">B.A.</option>
+                      <option value="2">B.A. (HONS)</option>
+                    </select>
+                    <span class="error field-validation-valid" data-valmsg-for="DivisionIdStr"
+                      data-valmsg-replace="true"></span>
+                  </div>
+                  <div class="ButtonArea">
+                    <button type="submit" class="buttonLogin ApplyNow">
+                      Apply Now
+                    </button>
+                  </div>
+                  <div class="AlreadyText mt_20">Already Applied?</div>
+                  <div class="ButtonArea mtb_30">
+                    <a class="buttonLogin" href="/LeadCapture/RedirectToSignInPage">Click here to Login</a>
                   </div>
                 </div>
-                <input
-                  name="__RequestVerificationToken"
-                  type="hidden"
-                  value="CfDJ8OOsJWxybflPv6ownYrfYkBWgDlvBQnFUZJIt3V9BQv1Bgu6heP4Se1n_w3CjjTn8GzqTyJQgjsT2jxvaXc4u04_0WRMXMHmnGZKxfdBKiNaqTsq8B0jDfiQb5c7FnCY8bRg3zLqf8r2YlkLGMsJhu0"
-                />
-              </form>
+              </div>
+              <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8OOsJWxybflPv6ownYrfYkBWgDlvBQnFUZJIt3V9BQv1Bgu6heP4Se1n_w3CjjTn8GzqTyJQgjsT2jxvaXc4u04_0WRMXMHmnGZKxfdBKiNaqTsq8B0jDfiQb5c7FnCY8bRg3zLqf8r2YlkLGMsJhu0" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="sectionWithBgLeft Placement-section">
+        <div class="AreaContainer">
+          <div class="Sectiontitle-part">
+            <!--  <div class="title">Placements</div> -->
+            <div class="Backtitle">Achievements</div>
+          </div>
+          <div class="Placement-section-inner d_flex_sb">
+            <div class="Placement-left" style="display: flex; flex-direction: column; gap: 20px;">
+              <div class="contentBox mb_30">
+                <div class="contentBoxTitle">
+                  University offering <span class="sp_num">130+</span> courses
+                </div>
+                <div class="contentBoxDescription">
+                  SOU offers programs which are contemporary in nature leading
+                  to good industry placements.
+                </div>
+              </div>
+              <div class="contentBox mb_30">
+                <div class="contentBoxTitle">
+                  Consistent placement of more than
+                  <span class="sp_num"> 70% </span> since last 7 years
+                </div>
+                <div class="contentBoxDescription">
+                  SOU has embarked upon quality placements with a goal of
+                  creating sustainable employment opportunity for the
+                  students. University has been blessed with alumni who are
+                  our present recruiter for campus placements
+                </div>
+              </div>
+              <div class="contentBox">
+                <div class="contentBoxTitle">
+                  <span class="sp_num"> 15k </span>young minds currently
+                  enrolled with university
+                </div>
+                <div class="contentBoxDescription">
+                  Campus is a classic amalgamation of students studying under
+                  various disciplines, who bring in cultural diversity in
+                  terms of experiential learning.
+                </div>
+              </div>
+            </div>
+            <div class="Placement-right p_15">
+              <img src="/images/placement.png" />
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="sectionWithBgLeft Placement-section">
+      <div class="about-section">
+        <div class="Placemaboutent-section-inner">
           <div class="AreaContainer">
-            <div class="Sectiontitle-part">
-              <!--  <div class="title">Placements</div> -->
-              <div class="Backtitle">Achievements</div>
-            </div>
-            <div class="Placement-section-inner">
-              <div class="Placement-left">
-                <div class="contentBox mb_30">
-                  <div class="contentBoxTitle">
-                    University offering <span class="sp_num">130+</span> courses
-                  </div>
-                  <div class="contentBoxDescription">
-                    SOU offers programs which are contemporary in nature leading
-                    to good industry placements.
-                  </div>
+            <div class="d_flex_sb p_15 placement_h">
+              <div class="about-Text placement_h_child1">
+                <div class="about-TextTitle">
+                  First university in Gujarat to introduce SAP courses in
+                  alliance with SAP University
                 </div>
-                <div class="contentBox mb_30">
-                  <div class="contentBoxTitle">
-                    Consistent placement of more than
-                    <span class="sp_num"> 70% </span> since last 7 years
-                  </div>
-                  <div class="contentBoxDescription">
-                    SOU has embarked upon quality placements with a goal of
-                    creating sustainable employment opportunity for the
-                    students. University has been blessed with alumni who are
-                    our present recruiter for campus placements
-                  </div>
-                </div>
-                <div class="contentBox">
-                  <div class="contentBoxTitle">
-                    <span class="sp_num"> 15k </span>young minds currently
-                    enrolled with university
-                  </div>
-                  <div class="contentBoxDescription">
-                    Campus is a classic amalgamation of students studying under
-                    various disciplines, who bring in cultural diversity in
-                    terms of experiential learning.
-                  </div>
+                <div class="about-TextDescription">
+                  University offers SAP Foundation and SAP Global
+                  Certification programme, first of its kind in the State
                 </div>
               </div>
-              <div class="Placement-right p_15">
-                <img src="/images/placement.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-section">
-          <div class="Placemaboutent-section-inner">
-            <div class="AreaContainer">
-              <div class="AreaContainerChild" >
-                <div class="about-Text">
-                  <div class="about-TextTitle">
-                    First university in Gujarat to introduce SAP courses in
-                    alliance with SAP University
-                  </div>
-                  <div class="about-TextDescription">
-                    University offers SAP Foundation and SAP Global
-                    Certification programme, first of its kind in the State
-                  </div>
+              <div class="about-Text">
+                <div class="about-TextTitle">
+                  Ignite- The incubation centre - a space for young
+                  entrepreurer
                 </div>
-                <div class="about-Text">
-                  <div class="about-TextTitle">
-                    Ignite- The incubation centre - a space for young
-                    entrepreurer
-                  </div>
-                  <div class="about-TextDescription">
-                    Dedicated 30k square feet of co working space for start-up
-                    enthusiast
-                  </div>
+                <div class="about-TextDescription">
+                  Dedicated 30k square feet of co working space for start-up
+                  enthusiast
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="events-section">
-          <div class="events-section-inner">
-            <div class="eventsBoxLists">
-              <div class="eventsBoxleft">
-                <div class="eventsBox">
-                  <div class="eventsBox-inner">
-                    <img src="/images/celeb_event.png" />
-                    <div class="boxContent">
-                      <div class="title">Celebrity Events</div>
-                      <div class="Description">
-                        Energised, culturally connected, vibrant and diversified
-                        culture of the university attracts Many celebrities, to
-                        have their foot prints at the campus for promotional &
-                        cultural events
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="eventsBoxright d_flex_sb">
-                <div class="eventsBox" style="overflow: hidden">
-                  <div class="eventsBox-inner">
-                    <img src="/images/college_building.png" />
-                    <div class="boxContent">
-                      <div class="title">University Campus</div>
-                      <div class="Description">
-                        The most vibrant campus, to give you the most vibrant
-                        learning experience.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="eventsBox">
-                  <div class="eventsBox-inner">
-                    <img src="/images/event_campus.png" />
-                    <div class="boxContent">
-                      <div class="title">Life at SOU</div>
-                      <div class="Description">
-                        Thrilled with high levels of energy, where in students
-                        apart from learning also imbibe with value based life
-                        lessons
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="eventsBox">
-                  <div class="eventsBox-inner">
-                    <img src="/images/event_lab.png" />
-                    <div class="boxContent">
-                      <div class="title">Tech laboratory</div>
-                      <div class="Description">
-                        Ideas are converted in reality- at this second home of
-                        most of the students at SOU campus
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="eventsBox">
-                  <div class="eventsBox-inner">
-                    <img src="/images/event_building.png" />
-                    <div class="boxContent">
-                      <div class="title">Awesome campus</div>
-                      <div class="Description">
-                        Campus within the heart of the city, with modern state
-                        of the art infrastructure, library, Open air theatre and
-                        hangout areas
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sectionWithBgLeft Block-section">
-          <div class="SmallAreaContainer">
-            <div class="Sectiontitle-part">
-              <div class="title">education to innovation</div>
-              <div class="Backtitle">Boundaries</div>
-            </div>
-            <div class="Block-section-inner">
-              <div class="eventsBox column_three">
+      <div class="events-section">
+        <div class="events-section-inner">
+          <div class="eventsBoxLists d_flex_sb">
+            <div class="eventsBoxleft">
+              <div class="eventsBox">
                 <div class="eventsBox-inner">
-                  <img src="/images/royalemfield.png" />
-                </div>
-                <div class="contentTitle">
-                  Centre of Excellence with "Royal Enfield"
-                </div>
-              </div>
-              <div class="eventsBox column_three">
-                <div class="eventsBox-inner">
-                  <img src="/images/aws.png" />
-                </div>
-                <div class="contentTitle">
-                  RAD HAT & AWS Academy, IEEE student chapter with Outstanding
-                  branch among 51 countries of Asia and Australasia
+                  <img src="/images/celeb_event.png" />
+                  <div class="boxContent">
+                    <div class="title">Celebrity Events</div>
+                    <div class="Description">
+                      Energised, culturally connected, vibrant and diversified
+                      culture of the university attracts Many celebrities, to
+                      have their foot prints at the campus for promotional &
+                      cultural events
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="eventsBox column_three">
+            </div>
+            <div class="eventsBoxright d_flex_sb">
+              <div class="eventsBox">
                 <div class="eventsBox-inner">
-                  <img src="/images/technno.jpg" />
+                  <img src="/images/college_building.png" />
+                  <div class="boxContent">
+                    <div class="title">University Campus</div>
+                    <div class="Description">
+                      The most vibrant campus, to give you the most vibrant
+                      learning experience.
+                    </div>
+                  </div>
                 </div>
-                <div class="contentTitle">
-                  State of the art ML, AI and Apple Laboratory
+              </div>
+              <div class="eventsBox">
+                <div class="eventsBox-inner">
+                  <img src="/images/event_campus.png" />
+                  <div class="boxContent">
+                    <div class="title">Life at SOU</div>
+                    <div class="Description">
+                      Thrilled with high levels of energy, where in students
+                      apart from learning also imbibe with value based life
+                      lessons
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="eventsBox">
+                <div class="eventsBox-inner">
+                  <img src="/images/event_lab.png" />
+                  <div class="boxContent">
+                    <div class="title">Tech laboratory</div>
+                    <div class="Description">
+                      Ideas are converted in reality- at this second home of
+                      most of the students at SOU campus
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="eventsBox">
+                <div class="eventsBox-inner">
+                  <img src="/images/event_building.png" />
+                  <div class="boxContent">
+                    <div class="title">Awesome campus</div>
+                    <div class="Description">
+                      Campus within the heart of the city, with modern state
+                      of the art infrastructure, library, Open air theatre and
+                      hangout areas
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="info-section">
-          <div class="info-section-inner sectionWithBgRight">
-            <div class="info-image">
-              <img src="/images/sports.png" />
-            </div>
-            <div class="info-Content">
-              <div class="contentBox">
-                <div class="infosmallTitle">Sports</div>
-                <div class="infoTitle">
-                  Collaboration with Eklavya Sports Academy with 45000 square
-                  yard space
-                </div>
-                <div class="infoDescription">
-                  Having 4 tennis courts, cricket ground (regular and box
-                  cricket), Olympic size swimming pool,2 Volley ball court,
-                  Basketball Court, Skating Ring, Football Ground, Badminton
-                  court, Table Tennis and Fully Equipped Gymnasium.
-                </div>
-              </div>
-            </div>
+      <div class="sectionWithBgLeft Block-section">
+        <div class="SmallAreaContainer">
+          <div class="Sectiontitle-part">
+            <div class="title">education to innovation</div>
+            <div class="Backtitle">Boundaries</div>
           </div>
-          <div class="info-section-inner sectionWithBgLeft">
-            <div class="info-Content">
-              <div class="contentBox">
-                <div class="infosmallTitle">Events</div>
-                <div class="infoTitle">
-                  Highest salary package of 35 Lac per annum
-                </div>
-                <div class="infoDescription">
-                  The University hosts dedicated T & P cell which prepares
-                  students for mock test, GD, PI and other attributes required
-                  for quality placements.
-                </div>
+          <div class="Block-section-inner">
+            <div class="eventsBox column_three">
+              <div class="eventsBox-inner">
+                <img src="/images/royalemfield.png" />
+              </div>
+              <div class="contentTitle">
+                Centre of Excellence with "Royal Enfield"
               </div>
             </div>
-            <div class="info-image">
-              <img src="/images/salery.png" />
+            <div class="eventsBox column_three">
+              <div class="eventsBox-inner">
+                <img src="/images/aws.png" />
+              </div>
+              <div class="contentTitle">
+                RAD HAT & AWS Academy, IEEE student chapter with Outstanding
+                branch among 51 countries of Asia and Australasia
+              </div>
+            </div>
+            <div class="eventsBox column_three">
+              <div class="eventsBox-inner">
+                <img src="/images/technno.jpg" />
+              </div>
+              <div class="contentTitle">
+                State of the art ML, AI and Apple Laboratory
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="count-section">
-          <div class="count-section-inner">
-            <div class="Sectiontitle-part">
-              <div class="title">We Are International</div>
-              <div class="subtitle">
-                Bridging Boundaries To Bring You New Academic Discoveries
+      <div class="info-section">
+        <div class="info-section-inner d_flex sectionWithBgRight">
+          <div class="info-image">
+            <img src="/images/sports.png" />
+          </div>
+          <div class="info-Content">
+            <div class="contentBox">
+              <div class="infosmallTitle">Sports</div>
+              <div class="infoTitle">
+                Collaboration with Eklavya Sports Academy with 45000 square
+                yard space
+              </div>
+              <div class="infoDescription">
+                Having 4 tennis courts, cricket ground (regular and box
+                cricket), Olympic size swimming pool,2 Volley ball court,
+                Basketball Court, Skating Ring, Football Ground, Badminton
+                court, Table Tennis and Fully Equipped Gymnasium.
               </div>
             </div>
-            <div class="AreaContainer">
-              <div class="d_flex_sb">
-                <div class="countBox">
-                  <div class="count-TextTitle">140 +</div>
-                  <div class="count-TextDescription">
-                    patents by Faculty and students
-                  </div>
+          </div>
+        </div>
+        <div class="info-section-inner d_flex sectionWithBgLeft">
+          <div class="info-Content">
+            <div class="contentBox">
+              <div class="infosmallTitle">Events</div>
+              <div class="infoTitle">
+                Highest salary package of 35 Lac per annum
+              </div>
+              <div class="infoDescription">
+                The University hosts dedicated T & P cell which prepares
+                students for mock test, GD, PI and other attributes required
+                for quality placements.
+              </div>
+            </div>
+          </div>
+          <div class="info-image">
+            <img src="/images/salery.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="count-section">
+        <div class="count-section-inner">
+          <div class="Sectiontitle-part">
+            <div class="title">We Are International</div>
+            <div class="subtitle">
+              Bridging Boundaries To Bring You New Academic Discoveries
+            </div>
+          </div>
+          <div class="AreaContainer">
+            <div class="d_flex_sb" style="justify-content: center;">
+              <div class="countBox">
+                <div class="count-TextTitle">140 +</div>
+                <div class="count-TextDescription">
+                  patents by Faculty and students
                 </div>
-                <div class="countBox">
-                  <div class="count-TextTitle">Pool of 2000 +</div>
-                  <div class="count-TextDescription">
-                    companies for recruitment and Internship
-                  </div>
+              </div>
+              <div class="countBox">
+                <div class="count-TextTitle">Pool of 2000 +</div>
+                <div class="count-TextDescription">
+                  companies for recruitment and Internship
                 </div>
-                <div class="countBox">
-                  <div class="count-TextTitle">50+</div>
-                  <div class="count-TextDescription">
-                    Students from African, Middle East, SAARC nations
-                  </div>
+              </div>
+              <div class="countBox">
+                <div class="count-TextTitle">50+</div>
+                <div class="count-TextDescription">
+                  Students from African, Middle East, SAARC nations
                 </div>
-                <div class="countBox">
-                  <div class="count-TextTitle">300 +</div>
-                  <div class="count-TextDescription">
-                    MoU with premier corporates
-                  </div>
+              </div>
+              <div class="countBox">
+                <div class="count-TextTitle">300 +</div>
+                <div class="count-TextDescription">
+                  MoU with premier corporates
                 </div>
               </div>
             </div>
@@ -473,181 +402,129 @@
         </div>
       </div>
     </div>
-    <div class="footer-section">
-      <div class="footer-section-inner">
-        <div class="footerTag">
-          THIS IS WHERE YOU BEGIN... THE FUTURE IS TODAY
-        </div>
-        <div class="SmallAreaContainer">
-          <div class="FooterParts">
-            <div class="footerLinks">
-              <div class="footerLinksTitle">Silver Oak University</div>
-              <ul>
-                <li>
-                  <a href="https://silveroakuni.ac.in/about" target="_blank"
-                    >About SOU</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://silveroakuni.ac.in/vision-mission"
-                    target="_blank"
-                    >Mission & Vision</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://silveroakuni.ac.in/teaching-learning"
-                    target="_blank"
-                    >Teaching and Learning process</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://silveroakuni.ac.in/academic-council"
-                    target="_blank"
-                    >Academic Council</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/mous" target="_blank"
-                    >MOUs</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://silveroakuni.ac.in/testimonials"
-                    target="_blank"
-                    >Testimonials</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/careers" target="_blank"
-                    >Careers</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="footerLinks">
-              <div class="footerLinksTitle">Leadership</div>
-              <ul>
-                <li>
-                  <a href="https://silveroakuni.ac.in/director" target="_blank"
-                    >Management</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/provost" target="_blank"
-                    >Provost</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/principal" target="_blank"
-                    >Principals/Deans</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/registrar" target="_blank"
-                    >Registrar</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/#popup1" target="_blank"
-                    >Board of Studies</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://silveroakuni.ac.in/students-achievements"
-                    target="_blank"
-                    >Students Achievements</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://silveroakuni.ac.in/governing-body"
-                    target="_blank"
-                    >Governing Body</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="footerLinks">
-              <div class="footerLinksTitle">Get in Touch With Us</div>
-              <ul>
-                <li>
-                  <a href="tel:+91-79-66046300"
-                    ><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
-                    +91-79-66046300</a
-                  >
-                </li>
-                <li>
-                  <a href="mailto:info@silveroakuni.ac.in"
-                    ><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
-                    info@silveroakuni.ac.in</a
-                  >
-                </li>
-                <li>
-                  <a href="https://silveroakuni.ac.in/" target="_blank"
-                    ><i class="fa fa-globe" aria-hidden="true"></i> &nbsp;
-                    www.silveroakuni.ac.in</a
-                  >
-                </li>
-              </ul>
-              <div class="footerLinksTitle">Address</div>
-              <ul>
-                <li>
-                  Silver Oak University Opp. Bhagwat Vidyapith, S. G. Road,
-                  Gota, Ahmedabad - 382481
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
 
-      <div class="copyright">
-        <div class="SmallAreaContainer">
-          <div class="copyright-inner">
-            <div class="text">All Rights Reserved. © SILVER OAK UNIVERSITY</div>
-            <div class="SocialList">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.facebook.com/SilverOakUni/"
-                    target="_blank"
-                    ><i class="fa fa-facebook" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/silveroakuni" target="_blank"
-                    ><i class="fa fa-twitter" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/silveroakuni/"
-                    target="_blank"
-                    ><i class="fa fa-instagram" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.pinterest.com/silveroakuni/"
-                    target="_blank"
-                    ><i class="fa fa-pinterest" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/silveroakuni" target="_blank"
-                    ><i class="fa fa-youtube-play" aria-hidden="true"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
+  <div class="footer-section">
+    <div class="footer-section-inner">
+      <div class="footerTag">
+        THIS IS WHERE YOU BEGIN... THE FUTURE IS TODAY
+      </div>
+      <div class="SmallAreaContainer">
+        <div class="FooterParts">
+          <div class="footerLinks">
+            <div class="footerLinksTitle">Silver Oak University</div>
+            <ul>
+              <li>
+                <a href="https://silveroakuni.ac.in/about" target="_blank">About SOU</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/vision-mission" target="_blank">Mission & Vision</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/teaching-learning" target="_blank">Teaching and Learning process</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/academic-council" target="_blank">Academic Council</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/mous" target="_blank">MOUs</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/testimonials" target="_blank">Testimonials</a>
+              </li>
+              <li style="margin-bottom: 0px;">
+                <a href="https://silveroakuni.ac.in/careers" target="_blank">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footerLinks">
+            <div class="footerLinksTitle">Leadership</div>
+            <ul>
+              <li>
+                <a href="https://silveroakuni.ac.in/director" target="_blank">Management</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/provost" target="_blank">Provost</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/principal" target="_blank">Principals/Deans</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/registrar" target="_blank">Registrar</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/#popup1" target="_blank">Board of Studies</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/students-achievements" target="_blank">Students Achievements</a>
+              </li>
+              <li style="margin-bottom: 0px;">
+                <a href="https://silveroakuni.ac.in/governing-body" target="_blank">Governing Body</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footerLinks">
+            <div class="footerLinksTitle" style="margin-top: 0px;">Get in Touch With Us</div>
+            <ul>
+              <li>
+                <a href="tel:+91-79-66046300"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+                  +91-79-66046300</a>
+              </li>
+              <li>
+                <a href="mailto:info@silveroakuni.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
+                  info@silveroakuni.ac.in</a>
+              </li>
+              <li>
+                <a href="https://silveroakuni.ac.in/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>
+                  &nbsp;
+                  www.silveroakuni.ac.in</a>
+              </li>
+            </ul>
+            <div class="footerLinksTitle" style="margin-top: 25px;" >Address</div>
+            <ul>
+              <li>
+                Silver Oak University Opp. Bhagwat Vidyapith, S. G. Road,
+                Gota, Ahmedabad - 382481
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </body>
+
+    <div class="copyright">
+      <div class="SmallAreaContainer">
+        <div class="copyright-inner">
+          <div class="text">All Rights Reserved. © SILVER OAK UNIVERSITY</div>
+          <div class="SocialList">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/SilverOakUni/" target="_blank"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/silveroakuni" target="_blank"><i class="fa fa-twitter"
+                    aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/silveroakuni/" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/silveroakuni/" target="_blank"><i class="fa fa-pinterest"
+                    aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/silveroakuni" target="_blank"><i class="fa fa-youtube-play"
+                    aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
