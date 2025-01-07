@@ -1,19 +1,3 @@
-@font-face {
-    font-family: "popins_medium";
-    src: url("webfonts/Poppins-Medium.ttf");
-}
-@font-face {
-    font-family: "popins_regular";
-    src: url("webfonts/Poppins-Regular.ttf");
-}   
-@font-face {
-    font-family: "popins_bold";
-    src: url("webfonts/Poppins-Bold.ttf");
-}   
-@font-face {
-    font-family: "popins_semibold";
-    src: url("webfonts/Poppins-SemiBold.ttf");
-}   
 .form_section {
     text-align: center;
     position: relative;
